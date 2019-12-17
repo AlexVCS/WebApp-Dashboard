@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    list-style: none;
 }
 
 .grid-container {
@@ -40,9 +41,9 @@
     padding-top: 30px;
 }
 
-.bell:hover {
-    transition: ease-in 3s;
-} 
+/* .bell:hover {
+    transition: height 4.5s;
+}  */
 
 .greenDot {
     max-height: 10px;
@@ -72,13 +73,24 @@
     display: flex;
     flex-direction: row;
     grid-area: navigation;
-    padding: 20px 125px 15px 1px;
+    padding: 25px 125px 15px 1px;
+    margin: 0;
+    height: 85px;
     justify-content: space-evenly;
 }
 
 .navIcons img {
     height: 35px;
     width: 35px;
+}
+
+.dashboardIcon {
+    fill: #fff;
+}
+
+.dbBorder {
+    padding-bottom: 10px;
+    border-bottom: 2px solid lightgreen;
 }
 
 .main {
@@ -94,18 +106,20 @@
 
 .dashboard {
     padding-right: 80px;
-    padding-left: 10px;
+    padding-left: 15px;
+    width: 150px;
+    margin-right: 10px;
     background-color: #fff;
 }
 
-.dashboardIcon {
-    padding-bottom: 10px;
-    border-bottom: 5px solid lightgreen;
-    fill: #fff;
+.dashboard h2 {
+    margin-top: 25px;
 }
 
 .dashSearch {
     border: solid #f6f6f6 2.5px;
+    margin-left: 15px;
+    border-radius: 5px;
 }
 
 input {
@@ -115,25 +129,29 @@ input {
 .alert-banner {
     background-color: #737ABF;
     display: inline-flex;
-    width: 100%;
+    width: 85%;
+    font-size: 15px;
     margin-top: 15px;
+    border-radius: 5px;
 }
 
-.alert-banner-close {
-    padding-left: -10px;
+.alert-banner p {
+    padding-left: 6px;
+    padding-right: 3.5px;
 }
 
 .traffic-nav {
-    list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding-top: 0;
+    padding-right: 65px;
 }
 
 .traffic-nav li {
     display: inline-block;
     padding-right: 10px;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .traffic-nav-link-active {
@@ -142,10 +160,9 @@ input {
     color: #fff;
 }
 
-#traffic-chart,
-#daily-chart,
-#users-chart {
-    padding-right: 35px;
+section h3,
+.stat-headline {
+    padding-left: 15px;
 }
 
 .line-graph-container,
@@ -154,27 +171,24 @@ input {
     width: 95vw;
 }
 
-/* .social-container {
-    display: flex;
-    justify-content: space-between;
-} */
-
 .twitter-image,
 .facebook-image,
 .google-plus {
-    max-width: 100px;
-    max-height: 700px;
+    width: 100px;
     background-color: #7377bf;
-    border-radius: 35px 10px 20px 15px;
+    border-radius: 50%;
     text-align: center;
-    border-style: solid;
-    align-self: flex-end;
+    margin-left: 25px;
 }
 
 .netwrkTitle {
-    color: #fff;
+    color: #7377bf;
     font-size: 20px;
     font-weight: bold;
+}
+
+.social-text p {
+    font-size: 40px;
 }
 
 .social-container,
@@ -182,14 +196,34 @@ input {
     border-bottom: .5px solid grey;
 }
 
-.new-members {
-    text-align: center;
-}
-
 .new-members img,
 .recent-activity img {
     border-radius: 50%;
     align-self: center;
+    padding-bottom: 10px;
+}
+
+.members-text {
+    padding-left: 15px;
+}
+
+.members-text a {
+    text-decoration: none;
+    color: #886ccc;
+}
+
+.members-container {
+    display: flex;
+    align-items: center;
+}
+
+.members-activity {
+    width: 80%;
+}
+
+.arrow {
+    color: #babcdf;
+    font-size: 20px;
 }
 
 .button-primary {
@@ -202,24 +236,6 @@ input {
     color: #cccccc;
 }
 
-.members-container {
-    display: flex;
-    justify-content: center;
-}
-
-.members-activity {
-    width: 80%;
-}
-
-.arrow {
-    color: #babcdf;
-    font-size: 20px;
-}
-
-section {
-    margin: 0 auto;
-}
-
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 
@@ -227,9 +243,14 @@ section {
         "navigation main";
     }
 
-    /* .head {
+    .head {
         justify-content: space-between;
-    } */
+        max-width: 680px;
+    }
+
+    .myName {
+        margin-right: 20px;
+    }
 
     .main {
         grid-template-columns: 50%;
@@ -251,6 +272,13 @@ section {
     .settings {
         grid-column: 1 / span 2;
     }
+
+    .navIcons {
+        flex-direction: column;
+        width: 35px;
+    }
+
+    /* Graph Rules */
 
     .line-graph-container {
     width: 90vw;
