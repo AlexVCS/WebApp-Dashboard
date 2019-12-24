@@ -181,6 +181,10 @@ section h3,
     margin-left: 25px;
 }
 
+.twitter-image {
+    padding: 15px;
+}
+
 .netwrkTitle {
     color: #7377bf;
     font-size: 20px;
@@ -233,7 +237,55 @@ section h3,
 
 .button-disabled {
     background-color: #b2b2b2;
-    color: #cccccc;
+    color: #fff;
+}
+
+.button-primary,
+.button-disabled {
+    order: -1;
+}
+
+.message,
+.settings {
+    display: flex;
+    flex-direction: column;
+    /* align-items: baseline; */
+}
+
+.message {
+    width: 70vw;
+}
+
+.form-area {
+    align-self: flex-end;
+}
+
+
+.settings-button label {
+    width: 70%;
+    align-self: baseline;
+}
+
+.settings-button span {
+    display: inline-block;
+    width: 40vw;
+}
+
+.switch-candy a {
+    background-color: #7377bf;
+}
+
+.switch-light.switch-candy > span {
+    color: #000;
+}
+
+.switch-light.switch-candy,
+.switch-light.switch-candy > span {
+    background-color: #fff;
+}
+
+#first-toggle {
+    margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {

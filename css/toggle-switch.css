@@ -240,7 +240,7 @@
   .switch-light.switch-candy span span,
   .switch-light.switch-candy input:checked ~ span span:first-child,
   .switch-toggle.switch-candy label {
-    color: #fff;
+    color: darkorange;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 1px #191b1e; }
