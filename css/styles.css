@@ -200,10 +200,15 @@ section h3,
     border-bottom: .5px solid grey;
 }
 
+.new-members,
+.recent-activity {
+    display: flex;
+    flex-direction: column;
+}
+
 .new-members img,
 .recent-activity img {
     border-radius: 50%;
-    align-self: center;
     padding-bottom: 10px;
 }
 
