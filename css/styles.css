@@ -215,7 +215,6 @@ section h3,
 .recent-activity {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
 }
 
 .new-members img,
