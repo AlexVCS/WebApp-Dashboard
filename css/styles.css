@@ -189,6 +189,10 @@ section h3,
     padding: 15px;
 }
 
+/* .twitter-border {
+    border: .5px solid #FBFBFB;
+} */
+
 .netwrkTitle {
     color: #7377bf;
     font-size: 20px;
@@ -206,10 +210,9 @@ section h3,
     font-size: 40px;
 }
 
-.social-container,
+/* .social-container,
 .new-members {
-    border-bottom: .5px solid grey;
-}
+    /* border-bottom: .5px solid grey; } */
 
 .new-members,
 .recent-activity {
@@ -321,12 +324,20 @@ section h3,
     }
 
     .head {
-        justify-content: space-between;
-        max-width: 680px;
+        width: 100vw;
     }
 
-    .myName {
-        margin-right: 20px;
+    .appName {
+        margin-right: 450px;
+    }
+
+    .navIcons {
+        padding-left: 20px;
+    }
+
+    .dbBorder {
+        border-bottom: none;
+        border-left: 2px solid lightgreen;
     }
 
     .main {
@@ -353,7 +364,8 @@ section h3,
     .navIcons {
         flex-direction: column;
         align-items: baseline;
-        width: 35px;
+        justify-content: flex-start;
+        width: 80px;
         height: 200px;
     }
 
