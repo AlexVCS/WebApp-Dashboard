@@ -15,7 +15,7 @@ alert.innerHTML =
 `
 alert.addEventListener('click', e => {
     const element = e.target;
-    if (event.classList.contains("alert-banner-close")) {
+    if (element.classList.contains("alert-banner-close")) {
         alert.style.display= "none"
     }
 });
