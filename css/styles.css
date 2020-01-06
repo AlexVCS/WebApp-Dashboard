@@ -217,7 +217,8 @@ section h3,
 .mobile-users,
 .social-container,
 .new-members,
-.recent-activity {
+.recent-activity,
+.message {
     border-bottom: .5px solid grey;
 }
 
@@ -291,30 +292,38 @@ section h3,
     width: 80vw;
 }
 
-.message {
-    width: 80vw;
-}
-
-.user-search {
+.user-search,
+.message-area,
+.select-timezone {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f6f6f6;
+    padding-left: 10px;
+    margin-bottom: 15px;
 }
 
 .widget-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-left: 30px;
 }
 
-.settings-button label {
-    width: 70%;
-    align-self: baseline;
+#send {
+    margin-bottom: 15px;
+}
+
+.settings-button {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#first-toggle,
+#second-toggle {
+    margin-bottom: 30px;
+    align-self: center;
 }
 
 .settings-button span {
-    display: inline-block;
     width: 40vw;
 }
 
@@ -331,8 +340,14 @@ section h3,
     background-color: #fff;
 }
 
-#first-toggle {
-    margin-bottom: 30px;
+.select-timezone,
+#save,
+#cancel {
+    margin: 0 auto;
+}
+
+#save {
+    margin-top: 15px;
 }
 
 @media (min-width: 768px) {

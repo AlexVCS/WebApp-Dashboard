@@ -253,7 +253,7 @@
 
           <form class="widget-container">
             <input type="text" placeholder="Search for user" class="user-search" id="userField">
-            <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+            <textarea placeholder="Message for user" class="message-area" id="messageField"></textarea>
             <button class="button-primary" id="send">Send</button>
           </form>
         </section>
@@ -262,12 +262,6 @@
         <section class="settings">
           <h3>SETTINGS</h3>
 
-          <select class="form-field" id="timezone">
-            <option disabled select>Select a Timezone</option>
-            <option>Eastern</option>
-            <option>Pacific</option>
-            <option>Central</option>
-          </select>
           <div class="settings-button">
               <label class="switch-light switch-candy" id="first-toggle" onclick="">
                 <input type="checkbox">
@@ -283,7 +277,7 @@
                 </span>
               </label>
 
-              <label class="switch-light switch-candy" onclick="">
+              <label class="switch-light switch-candy" id="second-toggle" onclick="">
                 <input type="checkbox">
               
                 <strong>
@@ -296,12 +290,19 @@
                   <a></a>
                 </span>
               </label>
+
+              <select class="select-timezone" id="timezone">
+                <option disabled select>Select a Timezone</option>
+                <option>Eastern</option>
+                <option>Pacific</option>
+                <option>Central</option>
+              </select>
+            </section>
+            
             <button class="button-primary" id="save">Save</button>
             <button class="button-disabled" id="cancel">Cancel</button>
           </div>
-        </section>
-      
-
+    
     </main>
     
  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
