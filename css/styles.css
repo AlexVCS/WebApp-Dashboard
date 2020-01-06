@@ -302,6 +302,10 @@ section h3,
     margin-bottom: 15px;
 }
 
+.user-search {
+    width: 55%;
+}
+
 .widget-container {
     display: flex;
     justify-content: center;
@@ -348,6 +352,10 @@ section h3,
 
 #save {
     margin-top: 15px;
+}
+
+#cancel {
+    margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
