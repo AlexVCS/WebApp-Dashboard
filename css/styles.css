@@ -321,6 +321,13 @@ section h3,
     flex-flow: column wrap;
 }
 
+.switch-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 #first-toggle,
 #second-toggle {
     margin-bottom: 30px;
