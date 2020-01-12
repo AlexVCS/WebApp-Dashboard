@@ -370,7 +370,6 @@ section h3,
         grid-template-areas: 
         "header header"
         "navigation main";
-        /* grid-template-columns: 55px 1fr; */
     }
 
     .head {
@@ -378,12 +377,18 @@ section h3,
     }
 
     .appName {
-        padding-right: 0;
+        padding-right: 470px;
     }
 
     .dbBorder {
         border-bottom: none;
+        padding-bottom: 0;
         border-left: 2px solid lightgreen;
+        margin-left: -24px;
+    }
+
+    .dashboardIcon {
+        margin-left: 20px;
     }
 
     .main {
@@ -394,8 +399,12 @@ section h3,
         border-bottom: .5px solid grey;
     }
     
-    .daily {
+    .daily,
+    .new-members {
         border-right: .5px solid grey;
+    }
+
+    .daily {
         border-bottom: .5px solid grey;
     }
 
@@ -420,11 +429,14 @@ section h3,
 
     .navIcons {
         flex-direction: column;
-        align-items: baseline;
         justify-content: flex-start;
-        width: 80px;
-        padding-left: 20px;
+        width: 85px;
+        padding-left: 25px;
         height: 100%;
+    }
+
+    .navIcons li {
+        margin-bottom: 30px;
     }
 
     /* Graph Rules */
@@ -449,5 +461,13 @@ section h3,
 
     .members-text p:nth-of-type(2) {
         text-align: right;
+    }
+
+    .widget-container {
+        width: 50vw;
+    }
+
+    .settings {
+        width: 45vw;
     }
 }
