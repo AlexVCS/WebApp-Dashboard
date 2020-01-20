@@ -80,6 +80,7 @@
         </div>
 
         <!-- bar graph -->
+        <div class="small-chart-group">
         <section class="daily">
           <h3>DAILY TRAFFIC</h3>
           <div class="bar-graph-container">
@@ -96,12 +97,13 @@
           <canvas id="users-chart"></canvas>
           </div>
           </section>
+        </div>
 
         <section class="social-container">
 
             <h3 class="stat-headline">SOCIAL STATS</h3>
 
-          <div class="social-flex-container"> 
+          <div id="twitter" class="social-flex-container"> 
           <div class="twitter-image">
               <?xml version="1.0" encoding="utf-8"?>
               <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -122,7 +124,7 @@
         </div>
         </div>
 
-        <div class="social-flex-container">
+        <div id="facebook" class="social-flex-container">
           <div class="facebook-image">
             <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 56.693 56.693" id="Layer_1" version="1.1" viewBox="-15 -15 90 85" x="0px" y="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="white" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
           </div>
@@ -134,7 +136,7 @@
         </div>
           
 
-          <div class="social-flex-container">
+          <div id="googlePlus" class="social-flex-container">
           <div class="google-plus">
             <?xml version="1.0" encoding="utf-8"?>
             <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -166,11 +168,11 @@
         </div>
       </section>
         
-
+        <div class="membersAndActivity">
         <section class="new-members">
           <h3>NEW MEMBERS</h3>
           
-          <div class="members-container">
+          <div class="members-container brder">
             <img src="images/member-1.jpg" alt="Victoria Headshot">
             <div class="members-text">
               <p>Victoria Chambers</p>
@@ -179,7 +181,7 @@
           </div>
           </div>
 
-          <div class="dale">
+          <div class="dale brder">
             <img src="images/member-2.jpg" alt="Dale Headshot">
             <div class="members-text">
               <p>Dale Byrd</p>
@@ -188,7 +190,7 @@
           </div>
           </div>
 
-          <div class="dawn">
+          <div class="dawn brder">
             <img src="images/member-3.jpg" alt="Dawn Headshot">
             <div class="members-text">
               <p>Dawn Wood</p>
@@ -210,7 +212,7 @@
         <section class="recent-activity">
           <h3>RECENT ACTIVITY</h3>
 
-          <div class="members-container">
+          <div class="members-container brder">
             <img src="images/member-1.jpg" alt="Victoria Headshot">
             <div class="members-activity">
               <p>Victoria Chambers commented on MyApp's SEO Tips</p>
@@ -219,6 +221,7 @@
             </div>
           </div>
 
+          <div class="members-container brder">
           <div class="dale">
             <img src="images/member-2.jpg" alt="Dale Headshot">
             <div class="members-activity">
@@ -227,7 +230,9 @@
               <p class="arrow">></p>
             </div>
           </div>
+          </div>
 
+          <div class="members-container brder">
           <div class="dawn">
             <img src="images/member-3.jpg" alt="Dawn Headshot">
             <div class="members-activity">
@@ -236,7 +241,9 @@
               <p class="arrow">></p>
             </div>
           </div>
+          </div>
 
+          <div class="members-container">
           <div class="dan">
             <img src="images/member-4.jpg" alt="Dan Headshot">
             <div class="members-activity">
@@ -246,6 +253,8 @@
             </div>
           </div>
         </section>
+      </div>
+      </div>
 
         <!-- messaging widget -->
         <section class="message">
@@ -292,15 +301,17 @@
               </label>
 
               <select class="select-timezone" id="timezone">
-                <option disabled select>Select a Timezone</option>
+                <option disabled selected>Select Timezone</option>
                 <option>Eastern</option>
                 <option>Pacific</option>
                 <option>Central</option>
+                <option>Mountain</option>
               </select>
-            </section>
+            
             
             <button class="button-primary" id="save">Save</button>
             <button class="button-disabled" id="cancel">Cancel</button>
+          </section>
           </div>
     
     </main>
