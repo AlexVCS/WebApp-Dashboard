@@ -392,9 +392,15 @@ section h3,
     .settings {
         width: 100vw;
     }
-
+/* 
     .appName {
         padding-right: 470px;
+    } */
+
+    .head {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 
     .dbBorder {
@@ -568,10 +574,6 @@ section h3,
         padding-left: 500px;
     }
 
-    .small-chart-group {
-        display: flex;
-    }
-
     .bar-graph-container,
     .donut-graph-container {
         width: 45vw;
@@ -651,6 +653,11 @@ section h3,
     #second-toggle span {
         width: 40vw;
     } */
+
+    .messageAndSettings {
+        display: flex;
+        margin: auto;
+    }
 
     #save,
     #cancel {
