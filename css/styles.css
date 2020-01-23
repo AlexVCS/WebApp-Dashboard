@@ -18,11 +18,18 @@
 .head {
     background-color: #737ABF;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
     justify-content: space-between;
     grid-area: header;
     height: 85px;
+}
+
+.left-content {
+    padding: 20px;
+}
+
+.appName {
+    font-size: 25px;
+    padding-left: 10px;
 }
 
 .appName,
@@ -31,14 +38,20 @@
     color: #fff;
 }
 
-.appName {
-    font-size: 25px;
-    padding-left: 10px;
+.right-content {
+    padding: 5px 15px;
+}
+
+.contentStuff {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .bell {
     height: 30px;
     width: 30px;
+    margin-top: 15px;
 }
 
 .bell:hover {
@@ -52,19 +65,19 @@
     margin-bottom: 26px;
 }
 
-.divider {
-    font-size: 25px;
-    display: inline-block;
-    height: 100px;
-}
-
 .selfie {
-    width: 55px;
-    height: 55px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid white;
+    margin-top: 4px;
+    width: 60px;
+    height: 50px;
 }
 
 .myName {
     font-size: 15px;
+    text-align: right;
+    margin: 0;
 }
 
 .navIcons {
@@ -149,7 +162,6 @@ input {
 .traffic-nav {
     display: flex;
     justify-content: center;
-    padding-right: 65px;
 }
 
 .traffic-nav li {
@@ -390,10 +402,6 @@ section h3,
     .settings {
         width: 100vw;
     }
-/* 
-    .appName {
-        padding-right: 470px;
-    } */
 
     .head {
         width: 100%;
@@ -426,10 +434,6 @@ section h3,
 
     .main {
         grid-template-columns: 50%;
-    }
-
-    .main-header {
-        width: 89vw;
     }
 
     .traffic {
@@ -547,6 +551,10 @@ section h3,
 }
 
 @media (min-width: 1024px) {
+    .right-content {
+        padding: 10px 45px;
+    }
+    
     .daily {
         border-right: .5px solid grey;
         }
@@ -572,13 +580,20 @@ section h3,
         padding-left: 500px;
     }
 
+    .small-chart-group {
+        display: flex;
+        width: 100vw;
+    }
+
     .bar-graph-container,
     .donut-graph-container {
         width: 45vw;
     }
 
-    .mobile-users {
-        width: 85vw;
+    .mobile-users,
+    .settings {
+        width: 45vw;
+        grid-column: 2 / span 1;
     }
 
     .stat-headline {
@@ -588,6 +603,10 @@ section h3,
     .social-container {
         flex-direction: row;
         height: 250px;
+    }
+
+    .grid-container {
+        grid-template-columns: 2fr;
     }
 
     .social-flex-container {
@@ -608,8 +627,9 @@ section h3,
         margin-left: 0;
     }
 
-    .new-members {
-        padding-right: 90px;
+    .new-members,
+    .recent-activity {
+        width: 45vw;
     }
 
     .brder {
@@ -638,8 +658,7 @@ section h3,
         border-bottom: none;
     }
 
-    .message,
-    .settings {
+    .message {
         width: 45vw;
     }
 
@@ -652,10 +671,10 @@ section h3,
         width: 40vw;
     } */
 
-    .messageAndSettings {
+    /* .messageAndSettings {
         display: flex;
         margin: auto;
-    }
+    } */
 
     #save,
     #cancel {
