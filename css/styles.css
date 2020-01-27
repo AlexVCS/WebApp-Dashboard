@@ -52,19 +52,17 @@
     height: 30px;
     width: 30px;
     margin-top: 15px;
+    -webkit-transition: padding 2s;
+    
 }
-
 .bell:hover {
-    transition: width .5s;
-    transition-timing-function: cubic-bezier(4, 3, 2);
+    -webkit-transition: border-radis 2s;   
 }
-
 .greenDot {
     max-height: 10px;
     max-width: 10px;
     margin-bottom: 26px;
 }
-
 .selfie {
     padding-left: 10px;
     margin-left: 10px;
@@ -393,16 +391,8 @@ section h3,
         grid-template-areas: 
         "header header"
         "navigation main";
-        /* grid-template-columns: 55px 1fr; */
     }
-
-    .daily,
-    .mobile-users,
-    .message,
-    .settings {
-        width: 100vw;
-    }
-
+    
     .head {
         width: 100%;
         display: flex;
@@ -444,14 +434,12 @@ section h3,
         padding-right: 0;
     }
 
-    .dashSearch {
-        margin-left: 220px;
-    }
+
 
     #searchBox {
         width: 270px;
     }
-    
+
     .alert-banner {
         margin-left: 20px;
         width: 80vw;
@@ -484,16 +472,20 @@ section h3,
     }
 
     /* Grid Column Rules */
-
     .traffic,
     .social-container,
     .main-header,
     .alert,
     .mobile-users,
     .daily {
-        grid-column: 1 / span 2;
-    }
-
+        grid-column: 1 / span 1;
+     }
+     
+	 .messageAndSettings {
+		 display: flex;
+		 flex-direction: column;
+     }
+     
     .members,
     .message,
     .settings {
@@ -505,7 +497,6 @@ section h3,
     }
 
     /* Graph Rules */
-
     .line-graph-container {
     width: 90vw;
     }
@@ -516,15 +507,17 @@ section h3,
         margin: auto;
     }
 
+    .small-chart-group {
+        width: 100vw;
+    }
+
     .social-container {
-        flex-direction: column;
         height: 500px;
     }
 
-    .social-flex-container{
+    .social-flex-container {
         padding-top: 25px;
         padding-bottom: 0;
-        margin-left: 200px;
     }
 
     .members-text p:nth-of-type(2) {
@@ -532,7 +525,6 @@ section h3,
     }
 
     .widget-container {
-        width: 50vw;
         margin: auto;
     }
 
@@ -551,11 +543,13 @@ section h3,
 }
 
 @media (min-width: 1024px) {
+
     .right-content {
         padding: 10px 45px;
     }
-    
-    .daily {
+
+    .daily,
+    .message {
         border-right: .5px solid grey;
         }
 
@@ -583,11 +577,6 @@ section h3,
     .small-chart-group {
         display: flex;
         width: 100vw;
-    }
-
-    .bar-graph-container,
-    .donut-graph-container {
-        width: 45vw;
     }
 
     .mobile-users,
@@ -627,8 +616,11 @@ section h3,
         margin-left: 0;
     }
 
+    .bar-graph-container,
+    .donut-graph-container,
     .new-members,
-    .recent-activity {
+    .recent-activity,
+    .message {
         width: 45vw;
     }
 
@@ -650,34 +642,36 @@ section h3,
         text-align: right;
     }
 
-    #send {
-        width: 40vw;
+    .messageAndSettings {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    #send,
+    .user-search,
+    .message-area {
+        width: 35vw;
     }
 
     .message {
         border-bottom: none;
     }
 
-    .message {
-        width: 45vw;
+    .user-search {
+        height: 35px;
     }
 
-    label strong {
-        text-align: left;
+    .message-area {
+        height: 70px;
     }
-
-    /* #first-toggle span,
-    #second-toggle span {
-        width: 40vw;
-    } */
-
-    /* .messageAndSettings {
-        display: flex;
-        margin: auto;
-    } */
 
     #save,
     #cancel {
         width: 20vw;
+     }
+
+     label strong {
+        text-align: left;
     }
-    }
+	 } /* closing MQ tag */
