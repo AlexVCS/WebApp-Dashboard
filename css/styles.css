@@ -434,7 +434,9 @@ section h3,
         padding-right: 0;
     }
 
-
+    .main-header {
+        width: 100vw;
+    }
 
     #searchBox {
         width: 270px;
@@ -497,9 +499,6 @@ section h3,
     }
 
     /* Graph Rules */
-    .line-graph-container {
-    width: 90vw;
-    }
 
     .bar-graph-container,
     .donut-graph-container {
@@ -507,7 +506,8 @@ section h3,
         margin: auto;
     }
 
-    .small-chart-group {
+    .small-chart-group,
+    .social-container {
         width: 100vw;
     }
 
