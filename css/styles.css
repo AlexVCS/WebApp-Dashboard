@@ -52,11 +52,11 @@
     height: 30px;
     width: 30px;
     margin-top: 15px;
-    -webkit-transition: padding 2s;
+    transition: transform 1s;
     
 }
 .bell:hover {
-    -webkit-transition: border-radis 2s;   
+    transform: rotate(45deg);
 }
 .greenDot {
     max-height: 10px;
@@ -406,6 +406,10 @@ section h3,
         margin-left: -24px;
     }
 
+    .dashSearch {
+        margin-left: 200px;
+    }
+
     .dashboardIcon {
         margin-left: 20px;
     }
@@ -511,6 +515,16 @@ section h3,
         width: 100vw;
     }
 
+    .daily,
+    .mobile-users {
+        display: inline-block;
+    }
+
+    .daily,
+    .message {
+        border-right: .5px solid grey;
+        }
+
     .social-container {
         height: 500px;
     }
@@ -547,11 +561,6 @@ section h3,
     .right-content {
         padding: 10px 45px;
     }
-
-    .daily,
-    .message {
-        border-right: .5px solid grey;
-        }
 
     .appName {
         padding-right: 670px;
