@@ -178,7 +178,9 @@ input {
 
 .active {
     background-color: #90cf9c;
-    border-radius: 5px;
+    padding-left: 6px;
+    margin-right: 10px;
+    border-radius: 7px;
     color: #fff;
 }
 
@@ -403,27 +405,22 @@ section h3,
         "navigation main";
     }
 
-    .main {
-        grid-template-columns: 50%;
+    .membersAndActivity,
+    .small-chart-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .traffic,
-    .social {
-        grid-column: 1 / span 2;
+    .membersAndActivity {
+        grid-template-areas:
+        "members"
+        "activity";
     }
 
-    .main-header,
-    .alert,
-    .daily,
-    .new-members,
-    .message {
-        grid-column: 1 / span 1;
-    }
-
-    .mobile,
-    .recent-activity,
-    .settings {
-        grid-column: 2 / span 1;
+    .small-chart-group {
+        grid-template-areas: 
+        "daily"
+        "mobile-users";
     }
 
     /* Header Styles */
@@ -501,21 +498,21 @@ section h3,
         width: 45vw;
     }
 
+    canvas,
     .traffic {
         width: 100vw;
     }
 
-    .traffic-nav {
-        justify-content: flex-end;
+    .traffic,
+    .daily {
+        border-bottom: .5px solid grey;
     }
 
-
-
-
-
-
-
-
+    .traffic-nav {
+        justify-content: flex-end;
+        margin-right: 80px;
+    }
+}
 
 
 
@@ -525,9 +522,6 @@ section h3,
 
 
     /*
-    .traffic {
-        border-bottom: .5px solid grey;
-    }
 
      .traffic,
     .social-container,
@@ -540,10 +534,6 @@ section h3,
     
     #searchBox {
         width: 270px;
-    }
-
-    .daily {
-        border-bottom: .5px solid grey;
     }
 
     .membersAndActivity {
@@ -587,7 +577,7 @@ section h3,
 
     .recent-activity {
         grid-column: 2 / span 1;
-    } */ */
+    } */
 
     /* Graph Rules */
 
