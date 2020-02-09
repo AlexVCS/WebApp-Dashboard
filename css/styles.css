@@ -520,6 +520,11 @@ canvas {
         border-right: .5px solid grey;
     }
 
+    .traffic,
+    .daily {
+        border-bottom: .5px solid grey;
+    }
+
     .traffic-nav {
         justify-content: flex-end;
         margin-right: 80px;
