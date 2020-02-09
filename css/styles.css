@@ -178,13 +178,19 @@ input {
 
 .active {
     background-color: #90cf9c;
-    border-radius: 5px;
+    padding-left: 6px;
+    margin-right: 10px;
+    border-radius: 7px;
     color: #fff;
 }
 
 section h3,
 .stat-headline {
     padding-left: 15px;
+}
+
+canvas {
+    max-width: 100%;
 }
 
 .line-graph-container,
@@ -385,6 +391,11 @@ section h3,
     margin: 0 auto;
 }
 
+.button-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #save {
     margin-top: 15px;
 }
@@ -403,33 +414,31 @@ section h3,
         "navigation main";
     }
 
-    .main {
-        grid-template-columns: 50%;
+    
+    .small-chart-group,
+    .membersAndActivity,
+    .messageAndSettings
+     {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .traffic,
-    .social {
-        grid-column: 1 / span 2;
+    .membersAndActivity {
+        grid-template-areas:
+        "members"
+        "activity";
     }
 
-    .main-header,
-    .alert,
-    .daily,
-    .new-members,
-    .message {
-        grid-column: 1 / span 1;
-    }
-
-    .mobile,
-    .recent-activity,
-    .settings {
-        grid-column: 2 / span 1;
+    .small-chart-group {
+        grid-template-areas: 
+        "daily"
+        "mobile-users";
     }
 
     /* Header Styles */
 
     .head {
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-between;
     }
@@ -439,8 +448,7 @@ section h3,
     .navIcons {
         flex-direction: column;
         justify-content: flex-start;
-        width: 75px;
-        padding-left: 20px;
+        padding-left: 15px;
         height: 100%;
     }
 
@@ -449,14 +457,14 @@ section h3,
     }
 
     .dashboardIcon {
-        margin-left: 16px;
+        margin-left: 11px;
     }
 
     .dbBorder {
         border-bottom: none;
         padding-bottom: 0;
         border-left: 2px solid lightgreen;
-        margin-left: -20px;
+        margin-left: -15px;
     }
 
     nav {
@@ -501,21 +509,102 @@ section h3,
         width: 45vw;
     }
 
-    .traffic {
-        width: 100vw;
+    .traffic,
+    .daily {
+        border-bottom: .5px solid grey;
+    }
+
+    .daily,
+    .new-members, /* New Members Style */
+    .message /* Message Style */ {
+        border-right: .5px solid grey;
     }
 
     .traffic-nav {
         justify-content: flex-end;
+        margin-right: 80px;
     }
 
+    /* Social Icon Styles */
 
+    .twitter-image {
+        margin-left: 0;
+    }
 
+    .social-widgets {
+        display: flex;
+        flex-direction: row;
+    }
 
+    .social-text {
+        padding-left: 15px;
+    }
 
+    .social-text p {
+        font-size: 30px;
+    }
 
+    /* Members and Activity Styles */
 
+    .new-members img, .recent-activity img {
+        width: 5vw;
+    }
 
+    .members-text {
+        font-size: 12px;
+    }
+
+    .members-text p:nth-of-type(2) {
+        text-align: right;
+    }
+
+    .brder {
+        border-bottom: .5px solid grey;
+    }
+
+    .members-container {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+    .members-activity {
+        text-align: left;
+        padding-left: 15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .arrow {
+        align-self: flex-end;
+    }
+
+    /* Message and Settings Styles */
+
+    .messageAndSettings {
+        grid-template-areas: 
+        "message"
+        "settings";
+    }
+
+    .message {
+        border-bottom: none;
+    }
+
+    .button-primary {
+        width: 40vw;
+    }
+
+    #save,
+    #cancel {
+        width: 20vw;
+        height: 30px;
+    }
+
+    .button-flex-container {
+        align-items: baseline;
+    }
+
+}
 
 
 
@@ -525,9 +614,6 @@ section h3,
 
 
     /*
-    .traffic {
-        border-bottom: .5px solid grey;
-    }
 
      .traffic,
     .social-container,
@@ -542,10 +628,6 @@ section h3,
         width: 270px;
     }
 
-    .daily {
-        border-bottom: .5px solid grey;
-    }
-
     .membersAndActivity {
         margin: auto;
         display: flex;
@@ -557,10 +639,6 @@ section h3,
         padding-right: 35px;
     }
 
-    /* .new-members img, .recent-activity img {
-        width: 10vw;
-    } */
-
     /* .recent-activity {
         margin-left: 20px;
     }
@@ -571,23 +649,6 @@ section h3,
         margin-left: 20px;
         padding-right: 0;
     }
-
-    /* Grid Column Rules */
-     
-	 /* .messageAndSettings {
-		 display: flex;
-		 flex-direction: column;
-     }
-     
-    .members,
-    .message,
-    .settings {
-        grid-column: 1 / span 1;
-    }
-
-    .recent-activity {
-        grid-column: 2 / span 1;
-    } */ */
 
     /* Graph Rules */
 
@@ -607,7 +668,7 @@ section h3,
         display: inline-block;
     }
 
-    .daily,
+    
     .message {
         border-right: .5px solid grey;
         }
@@ -622,21 +683,8 @@ section h3,
         padding-bottom: 0;
     }
 
-    .members-text p:nth-of-type(2) {
-        text-align: right;
-    }
-
     .widget-container {
         margin: auto;
-    }
-
-    #save {
-        width: 55vw;
-        height: 30px;
-    }
-
-    #cancel {
-        width: 55vw;
     }
 
     .settings-button {
@@ -645,37 +693,6 @@ section h3,
 } */
 
 @media (min-width: 1024px) {
-
-    .right-content {
-        padding: 10px 45px;
-    }
-
-    .appName {
-        padding-right: 670px;
-    }
-
-    .main-header,
-    .social-container {
-        width: 92vw;
-    }
-
-    .dashSearch {
-        margin-left: 450px;
-    }
-
-    .traffic {
-        width: 93vw;
-    }
-
-    .traffic-nav {
-        padding-left: 500px;
-    }
-
-    .small-chart-group {
-        display: flex;
-        width: 100vw;
-    }
-
     .mobile-users,
     .settings {
         width: 45vw;
