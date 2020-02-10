@@ -265,6 +265,7 @@ canvas {
 .new-members img,
 .recent-activity img {
     border-radius: 50%;
+    width: 20vw;
 }
 
 .members-text {
@@ -282,6 +283,7 @@ canvas {
     font-size: 13px;
 }
 
+.victoria,
 .dale,
 .dawn,
 .dan {
@@ -301,9 +303,9 @@ canvas {
 
 .members-activity {
     width: 80%;
-    text-align: center;
     margin-top: 30px;
-    padding-right: 13px;
+    padding-left: 5px;
+    font-size: 9px;
 }
 
 .arrow {
@@ -577,6 +579,7 @@ canvas {
         flex-wrap: wrap;
         margin-top: 0;
         padding-right: 0;
+        font-size: 12px;
     }
 
     .recent-activity {
@@ -611,92 +614,6 @@ canvas {
 
 }
 
-
-
-
-
-
-
-
-    /*
-
-     .traffic,
-    .social-container,
-    .main-header,
-    .mobile-users,
-    .daily {
-        grid-column: 1 / span 1;
-     }
-
-    
-    #searchBox {
-        width: 270px;
-    }
-
-    .membersAndActivity {
-        margin: auto;
-        display: flex;
-    }
-
-    .new-members {
-        border-right: .5px solid grey;
-        margin-left: 20px;
-        padding-right: 35px;
-    }
-
-    /* .recent-activity {
-        margin-left: 20px;
-    }
-
-    .members-activity {
-        text-align: unset;
-        width: 100%;
-        margin-left: 20px;
-        padding-right: 0;
-    }
-
-    /* Graph Rules */
-
-    /* .bar-graph-container,
-    .donut-graph-container {
-        width: 45vw;
-        margin: auto;
-    }
-
-    .small-chart-group,
-    .social-container {
-        width: 100vw;
-    }
-
-    .daily,
-    .mobile-users {
-        display: inline-block;
-    }
-
-    
-    .message {
-        border-right: .5px solid grey;
-        }
-
-    .social-container {
-        height: 300px;
-        flex-direction: row;
-        }
-
-    .social-flex-container {
-        padding-top: 25px;
-        padding-bottom: 0;
-    }
-
-    .widget-container {
-        margin: auto;
-    }
-
-    .settings-button {
-        margin: auto;
-    }
-} */
-
 @media (min-width: 1024px) {
     .mobile-users,
     .settings {
@@ -710,7 +627,7 @@ canvas {
 
     .social-container {
         flex-direction: row;
-        height: 250px;
+        height: 180px;
     }
 
     .grid-container {
@@ -720,6 +637,10 @@ canvas {
     .social-flex-container {
         margin-left: 0;
         padding-top: 0;
+    }
+
+    .social-widgets {
+        padding-top: 65px;
     }
 
     #twitter {
@@ -751,6 +672,10 @@ canvas {
     .members-activity {
         font-size: 12px;
         width: 65%;
+    }
+
+    .new {
+        padding-top: 10px;
     }
 
     .members-activity p {
