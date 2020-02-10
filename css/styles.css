@@ -272,10 +272,6 @@ canvas {
     text-align: left;
 }
 
-.new-members img {
-    padding-bottom: 15px;
-}
-
 .members-text a {
     text-decoration: none;
     color: #886ccc;
@@ -293,13 +289,14 @@ canvas {
     align-items: center;
 }
 
+.new-members .brder,
+.dan {
+    padding-bottom: 15px;
+}
+
 .members-container {
     display: flex;
     align-items: center;
-}
-
-.recent-activity img {
-    padding-bottom: 15px;
 }
 
 .members-activity {
@@ -559,16 +556,17 @@ canvas {
         font-size: 12px;
     }
 
-    .members-text p:nth-of-type(2) {
-        text-align: right;
+    .date {
+        padding-left: 35px;
+        font-size: 12px;
     }
 
     .brder {
         border-bottom: .5px solid grey;
+        width: 40vw;
     }
 
     .members-container {
-        padding-left: 10px;
         font-size: 12px;
     }
 
@@ -577,10 +575,12 @@ canvas {
         padding-left: 15px;
         display: flex;
         flex-wrap: wrap;
+        margin-top: 0;
+        padding-right: 0;
     }
 
-    .arrow {
-        align-self: flex-end;
+    .recent-activity {
+        padding-left: 10px;
     }
 
     /* Message and Settings Styles */
