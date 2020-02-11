@@ -171,7 +171,6 @@ input {
 
 .traffic-nav li {
     display: inline-block;
-    padding-right: 10px;
     font-size: 15px;
     font-weight: bold;
 }
@@ -473,7 +472,6 @@ canvas {
     /* Main Header Styles */
 
     .main-header {
-        width: 90.5vw;
         justify-content: space-between;
     }
 
@@ -621,17 +619,20 @@ canvas {
         grid-column: 2 / span 1;
     }
 
-    .stat-headline {
-        align-self: auto;
-    }
-
     .social-container {
         flex-direction: row;
         height: 180px;
+        width: 100%;
+        justify-content: space-evenly;
     }
 
     .grid-container {
         grid-template-columns: 2fr;
+    }
+
+    .stat-headline {
+        padding-left: 0;
+        flex-basis: 20%;
     }
 
     .social-flex-container {
@@ -640,7 +641,7 @@ canvas {
     }
 
     .social-widgets {
-        padding-top: 65px;
+        padding-top: 65px;  
     }
 
     #twitter {
